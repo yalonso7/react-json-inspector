@@ -1,6 +1,6 @@
 {
   "name": "generic-react-json-inspector",
-  "version": "6.1.4",
+  "version": "6.1.5",
   "description": "React JSON inspector component",
   "main": "json-inspector.js",
   "author": {
@@ -22,9 +22,6 @@
     "http-server": "^0.7.2",
     "react-dom": "^0.14.0",
     "watchify": "^2.0.0"
-  },
-  "peerDependencies": {
-    "react": "^0.14.0"
   },
   "keywords": [
     "react-component"
