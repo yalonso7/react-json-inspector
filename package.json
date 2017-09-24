@@ -1,6 +1,6 @@
 {
   "name": "generic-react-json-inspector",
-  "version": "6.1.8",
+  "version": "6.1.9",
   "description": "React JSON inspector component",
   "main": "json-inspector.js",
   "author": {
