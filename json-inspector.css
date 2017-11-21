@@ -52,6 +52,10 @@
 
 .json-inspector__key {
     color: #505050;
+    font-weight: bolder;
+}
+.json-inspector__leafKey {
+    color: #7e7e7e;
 }
 
 .json-inspector__value_helper,
