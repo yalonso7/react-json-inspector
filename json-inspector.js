@@ -103,7 +103,7 @@ module.exports = createClass({
     );
   },
   onExpandAll: function(expand) {
-    this.child.onExpandAll(expand)
+    this.child.onExpandCollapseAll(expand)
   },
 
   renderToolbar: function() {
@@ -128,6 +128,7 @@ module.exports = createClass({
     this.createFilterer(this.props.data, this.props.filterOptions, this.props.filterFunc);
   },
   componentDidMount: function() {
+    // collapsing all of the root's leaf by default
     this.onExpandAll(false)
   },
   componentWillReceiveProps: function(p) {
