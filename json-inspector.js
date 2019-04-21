@@ -81,6 +81,7 @@ module.exports = createClass({
         isNotFound ?
           React.createElement('div', { className: 'json-inspector__not-found' }, 'Nothing found') :
           leaf({
+            ref: function(instance) { this.child = instance; }.bind(this) ,
             data: data,
             onClick: p.onClick,
             id: p.id,
@@ -101,6 +102,10 @@ module.exports = createClass({
       )
     );
   },
+  onExpandAll: function(expand) {
+    this.child.onExpandCollapseAll(expand)
+  },
+
   renderToolbar: function() {
     var search = this.props.search;
 
@@ -121,6 +126,10 @@ module.exports = createClass({
   },
   componentWillMount: function() {
     this.createFilterer(this.props.data, this.props.filterOptions, this.props.filterFunc);
+  },
+  componentDidMount: function() {
+    // collapsing all of the root's leaf by default
+    this.onExpandAll(false)
   },
   componentWillReceiveProps: function(p) {
     this.createFilterer(p.data, p.filterOptions, p.filterFunc);
