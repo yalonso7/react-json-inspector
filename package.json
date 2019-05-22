@@ -1,6 +1,6 @@
 {
   "name": "react-json-inspector-demisto",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React JSON inspector component",
   "main": "json-inspector.js",
   "author": {

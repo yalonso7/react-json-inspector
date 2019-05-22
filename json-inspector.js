@@ -103,7 +103,9 @@ module.exports = createClass({
     );
   },
   onExpandAll: function(expand) {
-    this.child.onExpandCollapseAll(expand)
+    if (this.child) {
+        this.child.onExpandCollapseAll(expand)
+    }
   },
 
   renderToolbar: function() {
